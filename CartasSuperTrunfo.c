@@ -5,54 +5,90 @@
 // Por : Luan
 
 int main() {
-    
-    // Declaração de Variavéis
-    char estado, codigo[3], cidade[50]; // Variaveis para o Estado, código da carta e o nome da cidade.
-    int populacao, pontos_turisticos; // Variaveis para inputar o valor da população da cidade e os pontos turísticos.
-    float area, pib; // Variaveis para inputar os valores de area e pib da cidade.
 
-    printf("Bem Vindo ao jogo do Super Trunfo com o tema de Países\n\n");
-    printf("Para começar será necessário cadastrar as cartas do jogo!\n\n");
+    // Declaração de variáveis para a Carta 01
+    char estado01, codigo01[5], cidade01[50];
+    int populacao01, pontos_turisticos01;
+    float area01, pib01;
 
-    // Input do Estado - Ex: de A a H
-    printf("Digite uma letra de A a H :\n");
-    scanf("%c", &estado);
-    
-    // Input do código da carta - Ex: B02
-    printf("Digite o código da carta. (Repita a letra digitada anteriormente seguida de um valor entre 01 a 04 - Ex: C03) :\n");
-    scanf("%s", &codigo);
+    // Declaração de variáveis para a Carta 02
+    char estado02, codigo02[5], cidade02[50];
+    int populacao02, pontos_turisticos02;
+    float area02, pib02;
 
-    // Input do nome da cidade
-    printf("Digite o nome da cidade :\n");
-    scanf("%s", &cidade);
+    // Input dos dados da Carta 01
+    printf("Carta 01\n");
 
-    // Input da população da cidade.
-    printf("Digite a população da cidade :\n");
-    scanf("%d", &populacao);
+    // Input do Estado da Carta 01
+    printf("Digite uma letra de A a H: ");
+    scanf(" %c", &estado01);
 
-    // Input da Área em km²
-    printf("Digite a área em km² da cidade :\n");
-    scanf("%f", &area);
+    // Input do Código da Carta 01
+    printf("Digite o código da carta. (Repita a letra digitada anteriormente seguida de um valor entre 01 a 04 - Ex: C03): ");
+    scanf("%s", codigo01);
 
-    // Input do PIB
-    printf("Digite o PIB dessa cidade :\n");
-    scanf("%f", &pib);
+    // Input do nome da Cidade da Carta 01
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", cidade01);
 
-    // Input dos Pontos Turísticos
-    printf("Digite a quantidade de pontos turísticos nessa cidade :\n");
-    scanf("%d", &pontos_turisticos);
+    // Input da Populaçao da Carta 01
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao01);
 
-    // Mostrar os dados inputados
-    printf("Carta cadastrada com sucesso!\n\n");
-    printf("As informações inseridas foram :\n\n");
+    // Input da área da Carta 01
+    printf("Digite a área em km² da cidade: ");
+    scanf("%f", &area01);
 
-    printf("Estado: %c\n", estado);
-    printf("Código da Carta: %s\n", codigo);
-    printf("Nome da Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f km²\n", area);
-    printf("PIB: %f bilhões de reais.\n", pib);
-    printf("Número de Pontos Turísticos: %d\n", pontos_turisticos);
+    // Input do PIB da Carta 01
+    printf("Digite o PIB dessa cidade (em bilhões de reais): ");
+    scanf("%f", &pib01);
+
+    // Input dos Pontos Turísticos da Carta 01
+    printf("Digite a quantidade de pontos turísticos nessa cidade: ");
+    scanf("%d", &pontos_turisticos01);
+
+    // Entrada dos dados da Carta 02
+    printf("\nCarta 02\n");
+
+    // Input do Estado da Carta 02
+    printf("Digite uma letra de A a H: ");
+    scanf(" %c", &estado02);
+
+    // Input do Código da Carta 02
+    printf("Digite o código da carta. (Repita a letra digitada anteriormente seguida de um valor entre 01 a 04 - Ex: C03): ");
+    scanf("%s", codigo02);
+
+    // Input do nome da Cidade da Carta 02
+    printf("Digite o nome da cidade: ");
+    scanf(" %[^\n]", cidade02);  // Permite espaços no nome da cidade
+
+    // Input da Populaçao da Carta 02
+    printf("Digite a população da cidade: ");
+    scanf("%d", &populacao02);
+
+    // Input da área da Carta 02
+    printf("Digite a área em km² da cidade: ");
+    scanf("%f", &area02);
+
+    // Input do PIB da Carta 02
+    printf("Digite o PIB dessa cidade (em bilhões de reais): ");
+    scanf("%f", &pib02);
+
+    // Input dos Pontos Turísticos da Carta 02
+    printf("Digite a quantidade de pontos turísticos nessa cidade: ");
+    scanf("%d", &pontos_turisticos02);
+
+    // Exibição dos dados cadastrados
+    printf("\nInformações Cadastradas:\n");
+
+    // Mostrar resumo das cartas cadastradas
+    printf("\nCarta 01\n");
+    printf("Estado: %c\nCódigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nPontos Turísticos: %d\n",
+           estado01, codigo01, cidade01, populacao01, area01, pib01, pontos_turisticos01);
+
+    printf("\nCarta 02\n");
+    printf("Estado: %c\nCódigo: %s\nCidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nPontos Turísticos: %d\n",
+           estado02, codigo02, cidade02, populacao02, area02, pib02, pontos_turisticos02);
 
     return 0;
 }
